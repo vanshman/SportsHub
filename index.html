@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+    <title>Sports app</title>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            max-width: 40%;
+        }
+        #other{
+            color: rgb(147, 147, 248);
+        }
+        #otherMain{
+            color: black;
+            border: black 1px solid;
+            background-color: rgb(169, 216, 230);
+            border-radius: 5px;
+        }
+        #other, #otherMain, .sign, #size-large, #searchValue{
+            font-size: medium;
+        }
+        #typeOfUser{
+            margin-bottom: 15px;
+            max-width: 40%;
+        }
+        hr{
+            color: red;
+            background-color: red;
+        }
+
+        #sportName{
+            max-width: 40%;
+            margin-bottom: 15px;
+        }
+        .form-control{
+            width: 40%;
+        }
+        .white{
+            color: white;
+        }
+        #sportCampImg{
+            float: left;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 2.5px;
+        }
+        .campDiv{
+            width: 40%;
+            word-wrap: break-word;
+            padding: 10px;
+        }
+        .sign{
+            border: 2px solid white;
+            color: white;
+            margin-bottom: 5px;
+        }
+.logo
+{
+  float:left;
+  font-family: 'Bangers', cursive;
+  font-size:40px;
+  text-decoration:underline;
+  
+}
+.logo:hover{
+  text-decoration:none;
+  background-color:black;
+  color:#fa1616;
+}
+
+
+
+
+h1{
+  color:white;
+}
+
+.slideshow{
+  background-color:black;
+  width:100%;
+  height:600px;
+  overflow:hidden;
+  
+}
+
+
+
+
+
+.slideimg{
+  height:600px;
+  /*width:100%*/
+}
+
+.card{
+  background-color:black;
+  color:white;
+}
+
+.card-img-top{
+  height:10rem;
+  border:1px solid #fa1616;
+}
+
+.gl ,.gm{
+  color:#fa1616;
+  text-align:center;
+  height:100px;
+}
+
+.price-gl{
+  color:#fa1616;
+  
+}
+
+.joinus{
+    background-color:#fa1616;
+  
+}
+#injuryDesign{
+    background-color: rgb(169, 216, 230);
+    border-radius: 5px;
+    width: 40%;
+    border: black 1px solid;
+    word-wrap: break-word;
+    padding: 10px;
+}
+#imgYo{
+    position: absolute;
+    right: 50px;
+    top: 250px;
+    height: 500px;
+}
+#black{
+    color: black;
+}
+#buttonMargin{
+    margin-right: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+    
+          <div id='bgcolor'><h1 class="logo me-auto"><a href="index.html">Sports App</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    
+          <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#team">Developer</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a id='l6' onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" id="l7" class="getstarted scrollto" href="#about">Sign In</a></li></ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav></div><!-- .navbar -->
+    
+        </div>
+      </header><!-- End Header -->
+      <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div id="container" class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" >
+                <h1>Learn sports or teach it to others!</h1><h2>Sports app makes learning or teaching sports easy by connecting teachers to students</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a onclick="logup_setup()" class="btn-get-started scrollto">Get Started</a>
+                </div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" >
+                    <img src="Soccer-bro.png" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active">
+                
+            </div>
+            <div class="item">
+                HI
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    </div>
+
+  </section>
+    <center>
+        <div id='usersContainer'></div>
+    </center>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script>
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyBAAb32WRqtFX1uVCu3_TTE20ZyB5ZuRMY",
+
+            authDomain: "sports-app-a5720.firebaseapp.com",
+
+            projectId: "sports-app-a5720",
+
+            storageBucket: "sports-app-a5720.appspot.com",
+
+            messagingSenderId: "42672425383",
+
+            appId: "1:42672425383:web:0c703f7c5bcca02c44ce82",
+
+            measurementId: "G-Q889K63MRF"
+
+        };
+
+
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var auth = firebase.auth();
+        var user = auth.currentUser;
+        addAgain = true;
+        var show = true;
+        setTimeout(function () {
+            if (auth.currentUser.uid != null) {
+                document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Welcome back</h1><h2>Great to have you back :)</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="viewProfile()" class="btn-get-started scrollto">View Profiles</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="hero-img img-fluid animated" alt=""></div></div>';
+                document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a onclick="viewProfile()" class="nav-link scrollto" href="#about">View Profiles</a></li><li><a class="nav-link scrollto" onclick="Camp()" href="#services">Sports Camps</a></li><li><a class="nav-link scrollto" onclick="SportInjury()" href="#services">Sports Injuries</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a id="l9" onclick="settings()" class="nav-link scrollto">Settings</a></li><li><a class="nav-link scrollto" onclick="signout()">Sign Out</a></li></ul>';
+                document.getElementById("l6").style.visibility = "hidden";
+                document.getElementById("l7").style.visibility = "hidden";
+            } else if (auth.currentUser.uid == null) {
+                document.getElementById("l6").style.visibility = "visible";
+                document.getElementById("l7").style.visibility = "visible";
+                document.getElementById("l8").style.visibility = "hidden";
+            }
+        }, 2000);
+        function signup() {
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+
+            const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+            promise.catch(e => alert(e.message));
+            setTimeout(function () {
+                if (firebase.auth().currentUser.uid != null) {
+                    swal("Signed up");
+                    firebase.database().ref("Users").push().set({
+                        "name": document.getElementById("name").value,
+                        "typeOfUser": document.getElementById("typeOfUser").value,
+                        "uid": firebase.auth().currentUser.uid,
+                        "email": email.value,
+                        "about": document.getElementById("about").value,
+                        "sport": document.getElementById("sportName").value
+                    });
+                    firebase.database().ref(firebase.auth().currentUser.uid).push().set({
+                        "name": document.getElementById("name").value,
+                        "typeOfUser": document.getElementById("typeOfUser").value,
+                        "uid": firebase.auth().currentUser.uid,
+                        "email": email.value,
+                        "about": document.getElementById("about").value,
+                        "sport": document.getElementById("sportName").value
+                    });
+                    normal_setup();
+                    document.getElementById("l8").style.visibility = "visible";
+                    document.getElementById("l6").style.visibility = "hidden";
+                    document.getElementById("l7").style.visibility = "hidden";
+                }
+            }, 2000);
+        }
+        function signin() {
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+
+            const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+            promise.catch(e => alert(e.message));
+
+            setTimeout(function () {
+                if (firebase.auth().currentUser.uid != null) {
+                    window.alert("Signed in " + email.value);
+                    normal_setup();
+                    document.getElementById("l8").style.visibility = "visible";
+                    document.getElementById("l6").style.visibility = "hidden";
+                    document.getElementById("l7").style.visibility = "hidden";
+                }
+            }, 2000);
+            document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Welcome back</h1><h2>Great to have you back :)</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="viewProfile()" class="btn-get-started scrollto">View Profiles</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="img-fluid animated" alt=""></div></div>';
+            document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a class="nav-link scrollto" href="#about">View Profiles</a></li><li><a class="nav-link scrollto" onclick="Camp()" href="#services">Sports Camps</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" class="getstarted scrollto" href="#about">Sign In</a></li></ul>';
+        }
+        function signout() {
+            auth.signOut();
+            alert("Signed Out");
+            document.getElementById("l8").style.visibility = "hidden";
+            document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Learn sports or teach it to others!</h1><h2>Sports app makes learning or teaching sports easy by connecting teachers to students</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="logup_setup()" class="btn-get-started scrollto">Get Started</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="img-fluid animated" alt=""></div></div>';
+            document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a class="nav-link scrollto" href="#about">About</a></li><li><a class="nav-link scrollto" href="#services">Services</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" class="getstarted scrollto" href="#about">Sign In</a></li></ul>';
+        }
+        function login_setup() {
+            var html = "<div id='whiteBG'><br><br><br><br><input class='form-control' placeholder='Email' id='email' type='email'><br><br><br><br><input class='form-control' placeholder='Password' id='password' type='password'><br><button class='btn btn-success sign' onclick='signin()'>Sign In</button><p class='white'>Don't have an account? <a id='other' onclick='logup_setup()'>Sign Up</a></p></div>";
+            document.getElementById("container").innerHTML = html;
+        }
+        function logup_setup() {
+            var html2 = "<br><br><br><br><select name='typeOfUser' id='typeOfUser' class='form-control'><option value='SelectTypeOfUser'>Select Type Of User</option><option value='sports coach'>Sports coach</option><option value='sports student'>Sports student</option></select><select name='sportName' id='sportName' class='form-control'><option value='SelectSport'>Select Sport</option><option value='Basketball'>Basketball</option><option value='Football'>Football</option><option value='Cricket'>Cricket</option><option value='Hockey'>Hockey</option></select><input class='form-control' id='name' placeholder='Enter name'><br><input class='form-control' placeholder='Email' id='email' type='email'><br><br><br><br><input class='form-control' placeholder='Password' id='password' type='password'><br><input id='about' class='form-control' placeholder='Enter about yourself' type='text'><br><button class='btn btn-send sign' onclick='signup()'>Sign Up</button><p class='white'>Already have an account? <a id='other' onclick='login_setup()'>Sign In</a></p>";
+            document.getElementById("container").innerHTML = html2;
+        }
+        function normal_setup() {
+            firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshot) {
+                if(snapshot.val().typeOfUser.toUpperCase() == "SPORTS STUDENT"){
+                    var html3 = '';
+                }
+            });
+            document.getElementById("container").innerHTML = html3;
+        }
+        function viewProfile() {
+            var htmlProfile = "<h2>Search for other users</h2><br><br><input id='searchValue' placeholder='Type the user's username to search' class='form-control' type='text'><br><button onclick='searchUsers()' id='size-large' class='btn btn-success'>Search</button><br><br>";
+            if(addAgain === true){
+                addAgain = false;
+                firebase.database().ref("Users").on("child_added", function (snapshot) {
+                    user = auth.currentUser;
+                    var html = "";
+                    // give each message a unique ID
+                    html += "<p id='otherMain' onclick='view(this)' id='message-" + snapshot.key + "' data-id=" + snapshot.key + ">";
+                    html += "Name: " + snapshot.val().name + "<br>Email: " + snapshot.val().email + "<br>Type Of User: " + snapshot.val().typeOfUser + "<br>Sport: " + snapshot.val().sport + "<br>About: " + snapshot.val().about;
+                    html += "</p><br>";
+
+                    document.getElementById("usersContainer").innerHTML += html;
+                });
+                document.getElementById("container").innerHTML = htmlProfile;
+
+            }
+        }
+        function viewLargeprofile(){
+            document.getElementById("usersContainer").innerHTML = "<h1>" + snapshot.val().name;
+        }
+        function searchUsers() {
+
+        }
+        function view(self){
+            var messageId = self.getAttribute("data-id");
+        }
+        var htmlCamp;
+        function Camp(){
+            var typeOfUserStatus = "sports student";
+            firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshot) {
+                var typeOfUserStatus = snapshot.val().typeOfUser;
+                console.log(typeOfUserStatus);
+                if(typeOfUserStatus === "sports coach"){
+                    htmlCamp = "<h2>Search for sports camps</h2><br><br><input id='searchValueCamp' placeholder='Type the camp's name to search' class='form-control' type='text'><br><button onclick='searchCamp()' id='size-large' class='btn btn-info'>Search</button><br><br><button onclick='createCamp()' class='btn btn-info'>Create Camp</button><br><br><div id='usersContainer'></div>";
+                }
+                else{
+                    htmlCamp = "<h2>Search for sports camps</h2><br><br><input id='searchValueCamp' placeholder='Type the camp's name to search' class='form-control' type='text'><br><button onclick='searchCamp()' id='size-large' class='btn btn-info'>Search</button><br><br><div id='usersContainer'></div>";
+                }
+                document.getElementById("container").innerHTML = htmlCamp;
+            });
+            
+            firebase.database().ref("Camps").on("child_added", function (snapshot) {
+                user = auth.currentUser;
+                var html = "";
+                // give each message a unique ID
+                html += "<div class='campDiv " + snapshot.val().sport + "' id='otherMain'><img id='sportCampImg' src='" + snapshot.val().img + "'><p onclick='view(this)' id='message-" + snapshot.key + "' data-id=" + snapshot.key + ">";
+                html += "Name: " + snapshot.val().name + "<br>Contact: " + snapshot.val().email + "<br>Sport: " + snapshot.val().sport + "<br>About: " + snapshot.val().aboutCamp;
+                html += "</p></div><br>";
+
+                document.getElementById("usersContainer").innerHTML += html;
+            });
+            
+        }
+        function createCamp(){
+            document.getElementById("container").innerHTML = "<div id='img'></div><progress value='0' max='100' id='uploader'>0%</progress><input type='file' class='white' value='Upload pic' id='file'><br><input class='form-control' id='campName' placeholder='Type the camp's name><br><select name='sportName' id='campSport' class='form-control'><option value='SelectSport'>Select Sport</option><option value='Basketball'>Basketball</option><option value='Football'>Football</option><option value='Cricket'>Cricket</option><option value='Hockey'>Hockey</option></select><br><input id='campContact' class='form-control' placeholder='Enter the contact details for joining the camp'><br><textarea id='aboutCamp' placeholder='Enter more details about the camp' class='form-control'></textarea><br><button onclick='createCampFunc()' class='btn btn-success'>Create Camp</button>";
+            document.getElementById("file").onchange = e => {
+            files = e.target.files[0];
+            reader = new FileReader()
+            reader.onload = function(){
+                url = reader.result;
+                
+            }
+            if (reader.readAsDataURL) {
+                reader.readAsDataURL(files);
+            }
+            else if (reader.readAsDataUrl) {
+                reader.readAsDataurl(files);
+            }
+        }
+        }
+        function createCampFunc(){
+            firebase.database().ref("Camps").push().set({
+                "name": document.getElementById("campName").value,
+                "sport": document.getElementById("campSport").value,
+                "campContact": document.getElementById("campContact").value,
+                "aboutCamp": document.getElementById("aboutCamp").value,
+                "img": url
+            });
+        }
+        var repeatSportInjuryBool = true;
+        var imgDisplayBool = false;
+        function SportInjury(){
+            document.getElementById("container").innerHTML = "<h2 class='white'>Sports Injuries</h2><br><h3 class='white'>Your questions related to Sports Injury</h3><br><br><button id='buttonMargin' class='btn btn-info' onclick='createQuerySetup()'>Create New Query</button><button onclick='viewQueries()' class='btn btn-info'>View All Queries";
+                firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshota) {
+                    var coachBool;
+                    if(snapshota.val().typeOfUser === "sports coach"){
+                        coachBool = true;
+                    }
+                    firebase.database().ref("SportInjuries").on("child_added", function (snapshot) {
+                        if(show === true){
+                            if(snapshot.val().uid === firebase.auth().currentUser.uid){
+                                answerHTML = "<p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status;
+                                if(coachBool === true){
+                                    htmlData = "<div id='query' class='d-flex justify-content-center justify-content-lg-start'><p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "<button data-id='" + snapshot.val().ExistingAnswers + "' class='" + snapshot.key + "' id='Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "' onclick='answerQuery(this)'><p id='black'>Answer</p></button><br><p class='white'>Existing Answers:</p>";
+                                }
+                                else{
+                                    htmlData = "<div id='query' class='d-flex justify-content-center justify-content-lg-start'><div id='injuryDesign'><p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "</p><br><p class='white'>Existing Answers:</p>";
+                                }
+                                var array = "[" + snapshot.val().ExistingAnswers + "]";
+                                array = array.split(",");
+                                for(i = 0; i < array.length; i++){
+                                    stringArr = array[i].toString();
+                                    stringArr = stringArr.replace("[", "");
+                                    stringArr = stringArr.replace("]", "");
+                                    htmlData += "<p class='white'>" + stringArr;
+                                    htmlData += "</p><br>";
+                                }
+                                htmlData += "</div></div><hr>";
+                                document.getElementById("container").innerHTML += htmlData;
+                                imgDisplayBool = true;
+                                if(repeatSportInjuryBool === true){
+                                    repeatSportInjuryBool = false;
+                                    SportInjury();
+                                }
+                            }
+                        }
+                    });
+                });
+                if(imgDisplayBool === true){
+                    document.getElementById("container").innerHTML += '</div></div><img id="imgYo" src="Soccer-bro.png" class="img-fluid animated" alt="">';
+                }
+                
+        }
+        function createQuerySetup(){
+            document.getElementById("container").innerHTML = "<input id='queryInput' placeholder='Enter Query' type='text' class='form-control'><button onclick='createQuery()' class='btn btn-info'>Create Query</button>";
+        }
+        function createQuery(){
+            show = false;
+            query = document.getElementById("queryInput").value;
+            var name;
+            firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshot) {
+                name = snapshot.val().name;
+                firebase.database().ref("SportInjuries").push().set({
+                    "name": name,
+                    "query": query,
+                    "uid": firebase.auth().currentUser.uid,
+                    "status": "Not answered",
+                    "ExistingAnswers": ""
+                });
+            });
+            show = true;
+            SportInjury();
+        }
+        var self, selfkey, previousAnswers;
+        function answerQuery(x){
+            self = x.getAttribute("id");
+            selfkey = x.getAttribute("class");
+            previousAnswers = x.getAttribute("data-id");
+            console.log(selfkey);
+            document.getElementById("container").innerHTML = "<p class='white'>" + self + "</p>" + "<br><br><br><input class='form-control' placeholder='Enter Answer' type='text' id='answer'><button onclick='answer()' class='btn-get-started'>Answer</button>";
+        }
+        function answer(){
+            firebase.database().ref("SportInjuries").child(selfkey).update({
+                "ExistingAnswers": previousAnswers + ", " + document.getElementById("answer").value
+            });
+        }
+        function viewQueries(){
+            var coachBool;
+            document.getElementById("container").innerHTML = "<h2 class='white'>Sports Injuries</h2><br><h3 class='white'>Your questions related to Sports Injury</h3><br><br><button id='buttonMargin' class='btn btn-info' onclick='createQuerySetup()'>Create New Query</button><button onclick='SportInjury()' class='btn btn-info'>View Your Queries";
+            firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshota) {
+                if(snapshota.val().typeOfUser === "sports coach"){
+                    coachBool = true;
+                }
+                firebase.database().ref("SportInjuries").on("child_added", function (snapshot) {
+                    console.log(coachBool);
+                    if(show === true){
+                        answerHTML = "<p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status;
+                        if(coachBool === true)
+                        {
+                            htmlData = "<div id='query' class='d-flex justify-content-center justify-content-lg-start'><div id='injuryDesign'><p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "<button data-id='" + snapshot.val().ExistingAnswers + "' class='" + snapshot.key + "' id='Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "' onclick='answerQuery(this)'><p id='black'>Answer</p></button><div id='answers'></div><p class='white'>Existing Answers:</p>";
+                        }
+                        else{
+                            console.log(coachBool);
+                            htmlData = "<div id='query' class='d-flex justify-content-center justify-content-lg-start'><div id='injuryDesign'><p class='white'>Name: " + snapshot.val().name + "<br>Query: " + snapshot.val().query + "<br>Status: " + snapshot.val().status + "<div id='answers'></div><p class='white'>Existing Answers:</p>";
+                        }
+                        var array = "[" + snapshot.val().ExistingAnswers + "]";
+                        array = array.split(",");
+                        for(i = 0; i < array.length; i++){
+                            stringArr = array[i].toString();
+                            stringArr = stringArr.replace("[", "");
+                            stringArr = stringArr.replace("]", "");
+                            htmlData += "<p class='white'>" + stringArr;
+                            htmlData += "</p><br>";
+                        }
+                        htmlData += "</div></div><hr>";
+                        document.getElementById("container").innerHTML += htmlData;
+                        
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
