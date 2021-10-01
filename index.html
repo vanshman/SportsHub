@@ -323,7 +323,7 @@ h1{
 
             setTimeout(function () {
                 if (firebase.auth().currentUser.uid != null) {
-                    window.alert("Signed in " + email.value);
+                    swal("Signed in " + email.value);
                     normal_setup();
                     document.getElementById("l8").style.visibility = "visible";
                     document.getElementById("l6").style.visibility = "hidden";
@@ -335,10 +335,10 @@ h1{
         }
         function signout() {
             auth.signOut();
-            alert("Signed Out");
-            document.getElementById("l8").style.visibility = "hidden";
+            swal("Signed Out");
             document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Learn sports or teach it to others!</h1><h2>Sports app makes learning or teaching sports easy by connecting teachers to students</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="logup_setup()" class="btn-get-started scrollto">Get Started</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="img-fluid animated" alt=""></div></div>';
             document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a class="nav-link scrollto" href="#about">About</a></li><li><a class="nav-link scrollto" href="#services">Services</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" class="getstarted scrollto" href="#about">Sign In</a></li></ul>';
+            document.getElementById("l8").style.visibility = "hidden";
         }
         function login_setup() {
             var html = "<div id='whiteBG'><br><br><br><br><input class='form-control' placeholder='Email' id='email' type='email'><br><br><br><br><input class='form-control' placeholder='Password' id='password' type='password'><br><button class='btn btn-success sign' onclick='signin()'>Sign In</button><p class='white'>Don't have an account? <a id='other' onclick='logup_setup()'>Sign Up</a></p></div>";
