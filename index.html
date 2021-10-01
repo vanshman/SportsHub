@@ -310,8 +310,7 @@ h1{
                     document.getElementById("l8").style.visibility = "visible";
                     document.getElementById("l6").style.visibility = "hidden";
                     document.getElementById("l7").style.visibility = "hidden";
-                    document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Welcome back</h1><h2>Great to have you back :)</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="viewProfile()" class="btn-get-started scrollto">View Profiles</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="img-fluid animated" alt=""></div></div>';
-                    document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a class="nav-link scrollto" href="#about">View Profiles</a></li><li><a class="nav-link scrollto" onclick="Camp()" href="#services">Sports Camps</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" class="getstarted scrollto" href="#about">Sign In</a></li></ul>';
+                    
                 }
             }, 2000);
         }
@@ -350,11 +349,8 @@ h1{
             document.getElementById("container").innerHTML = html2;
         }
         function normal_setup() {
-            firebase.database().ref(firebase.auth().currentUser.uid).on("child_added", function (snapshot) {
-                if(snapshot.val().typeOfUser.toUpperCase() == "SPORTS STUDENT"){
-                    var html3 = '';
-                }
-            });
+            document.getElementById("container").innerHTML = '<div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" ><h1>Welcome back</h1><h2>Great to have you back :)</h2><div class="d-flex justify-content-center justify-content-lg-start"><a onclick="viewProfile()" class="btn-get-started scrollto">View Profiles</a></div></div><div class="col-lg-6 order-1 order-lg-2 hero-img" ><img src="Soccer-bro.png" class="img-fluid animated" alt=""></div></div>';
+            document.getElementById("navbar").innerHTML = '<ul><li><a class="nav-link scrollto" href="#hero">Home</a></li><li><a class="nav-link scrollto" href="#about">View Profiles</a></li><li><a class="nav-link scrollto" onclick="Camp()" href="#services">Sports Camps</a></li><li><a class="nav-link scrollto" href="#team">Developer</a></li><li><a class="nav-link scrollto" href="#contact">Contact</a></li><li><a onclick="logup_setup()" class="getstarted scrollto" href="#about">Get Started</a></li><li><a onclick="login_setup()" class="getstarted scrollto" href="#about">Sign In</a></li></ul>';
             document.getElementById("container").innerHTML = html3;
         }
         function viewProfile() {
